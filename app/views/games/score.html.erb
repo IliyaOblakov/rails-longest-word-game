@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Result!</h1>
+  <% if @great %>
+      <p><%="Congratulations #{@great} is a valid word!" %></p>
+    <%elsif @is_not_included %>
+      <p><%= "Sorry but #{@is_not_included} can't be build from #{@letters}" %></p>
+    <% else %>
+        <p><%= "Sorry but #{@is_not_a_word} is not seem to be a valid english word." %></p>
+    <% end %>
+    <p id="back"><%= link_to "Play again?", "/new" %></p>
+</div>
